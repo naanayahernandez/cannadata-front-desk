@@ -33,7 +33,7 @@
                         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
                             <div class="inner-addon search-icon">
                                 <i class="glyphicon glyphicon-search"></i>
-                                <input type="text" placeholder="Search Patients" class="form-control search-box"/>
+                                <input type="text" placeholder="Search All Patients" class="form-control search-box"/>
                             </div>
                         </div>
                         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
@@ -48,7 +48,95 @@
         <div id="content">
             <div class="row">
 
-                
+                <!--ALL patients-->
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <div class="row">
+                        <div class="table-container all-patients-card">
+                            <div class="table-title-and-icon"> 
+                                <h3>All Patients</h3>
+                            </div>
+                            <table class="table table-style">
+                                <thead>
+                                    <th>Name</th>
+                                    <th>California ID</th>
+                                    <th>DOB</th>
+                                    <th>     </th>
+                                    <th>     </th>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                    <td>John Smith</td>
+                                    <td>123456789</td>
+                                    <td>12/12/1994</td>
+                                    <td><a class="btn btn-primary index-btn let-in-btn" href="patient-info.html" role="button">View</a></td>
+                                    <td><button type="button" class="btn btn-info delete-btn index-btn">Delete</button></td>
+                                    </tr>
+                                    <tr>
+                                    <td>John Smith</td>
+                                    <td>123456789</td>
+                                    <td>12/12/1994</td>
+                                    <td><button type="button" class="btn btn-info let-in-btn index-btn">View</button></td>
+                                    <td><button type="button" class="btn btn-info delete-btn index-btn">Delete</button></td>
+                                    </tr>
+                                    <tr>
+                                    <td>John Smith</td>
+                                    <td>123456789</td>
+                                    <td>12/12/1994</td>
+                                    <td><button type="button" class="btn btn-info let-in-btn index-btn">View</button></td>
+                                    <td><button type="button" class="btn btn-info delete-btn index-btn">Delete</button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+
+                 <!--Col 1-->
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                    <div class="row">
+                        <div class="table-container needed-renewal-card">
+                            <div class="table-title-and-icon"> 
+                                <h3>Needed Renewal</h3>
+                            </div>
+                            <table class="table table-style">
+                                <thead>
+                                    <th>First Name</th>
+                                    <th>California ID</th>
+                                    <th>Days Left</th>
+                                    <th>     </th>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>John</td>
+                                    <td>Crack</td>
+                                    <td>3</td>
+                                    <td><a class="view-link" href="patient-info.html">View</a></td>
+                                </tr>
+                                <tr>
+                                    <td>John</td>
+                                    <td>Black</td>
+                                    <td>5</td>
+                                    <td><a class="view-link" href="patient-info.html">View</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Sarah</td>
+                                    <td>Smith</td>
+                                    <td>10</td>
+                                    <td><a class="view-link" href="patient-info.html">View</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Sally</td>
+                                    <td>Green</td>
+                                    <td>12</td>
+                                    <td><a class="view-link" href="patient-info.html">View</a></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
 
             </div>
         </div>

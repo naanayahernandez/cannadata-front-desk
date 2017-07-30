@@ -284,6 +284,7 @@ th {
     background-color: #99cc33;
     color: white;
     width: 150px;
+    margin-top: 35px;
 }
 
 legend {
@@ -314,4 +315,27 @@ legend {
 
 #img-upload{
     width: 100%;
+}
+
+.history-card, .in-store-card, .queue-card {
+    max-height: 200px;
+    overflow: auto;
+}
+
+.all-patients-card {
+    max-height: 400px;
+    overflow: auto;
+}
+
+.needed-renewal-card {
+    max-height: 300px;
+    overflow: auto;
+}
+
+.view-link {
+    color: #99cc33;
+}
+
+td a:hover {
+    color: white;
 }
