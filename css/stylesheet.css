@@ -20,18 +20,23 @@ div#header{
 div#sidebar {
    position:fixed;
    height:100%;
-   width:200px; 
+   width:180px; 
    top:0;
    left:0;
-   background:white; 
-   opacity: .08;
+   background-color:#192836;
+   padding-top: 150px;
+}
+
+.sidebar-nav-list li {
+    font-family: DinMedium;
+    color: white;
+    text-transform: uppercase;
+    list-style: none;
 }
 
 div#content {
-    background:#061726;
-    width:100%;
-    padding-left: 230px;
-    padding-top: 150px;
+    background:#061726; 
+    padding: 150px 30px 0px 210px;
 }
 
 .navbar-default {
@@ -85,25 +90,79 @@ div#content {
     background-color: #F4F4F4;
 }
 
+.countdown-container {
+    /*display: inline-block;*/
+    background-color: green;
+    color: white;
+    margin: 0px 30px 20px 30px;
+    padding: 10px;
+    text-align: center;
+
+}
+
+.countdown-container h2, p{
+    margin: 0;
+    font-size: 15px;
+}
+
+.countdown-container h2 {
+    font-size: 35px;
+}
+
+.patient-name-container {
+    margin: 15px 20px;
+    color: white;
+}
+
+.patient-name-container h2 {
+    margin: 0;
+    font-family: DinMedium;
+}
+
 .table {
     margin-bottom: 0;
-    width: 400px;
     margin-left: auto;
 	margin-right: auto;
-	max-width: 1000px;
+	/*max-width: 1000px;*/
 	float: none;
 }
 
 .table-container {
     background-color: #192836;
-    padding: 30px;
     border-radius: 20px;
-    width: 480px;
+    padding: 30px;
+    margin: 20px 20px;
+}
+
+.table-title-and-icon {
+    display: inline-block;
+    padding: 0px 0px 20px 0px;
+    width: 100%;
+}
+
+.table-icons {
+    float: right;
+    color: #99cc33;
+}
+
+.table-title-and-icon i:hover {
+    color: #3c763d;
+}
+
+.table-container h3 {
+    font-family: DinMedium;
+    font-size: 25px;
+    text-align: center;
+    color: white;
+    padding: 0px;
+    float: left;
+    margin: 0;
 }
 
 .table-style {
     font-family: DinLight;
     color: white;
+    font-size: 13px;
 }
 
 .table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
@@ -114,14 +173,76 @@ div#content {
     border-top: none;
 }
 
-caption {
-    font-family: DinMedium;
-    font-size: 25px;
-    text-align: center;
-    color: white;
-    padding: 0px 0 10px 0;
-}
-
 th {
     font-family: DinMedium;
+    width: 30%;
+}
+
+.active {
+    color: #99cc33;
+    text-decoration: none;
+}
+
+.icon-bar {
+    width: 100%;
+}
+
+.icon-bar li {
+    list-style: none;
+}
+
+.icon-bar ul {
+    padding: 0;
+    margin: 0;
+}
+
+.icon-bar a {
+    display: block;
+    text-align: center;
+    margin: 0px 10px 25px 10px;
+    transition: all 0.5s ease;
+    color: white;
+    font-size: 19px;
+}
+
+.icon-bar i {
+    margin-bottom: 10px;
+}
+
+.icon-bar a:hover {
+    color: #99cc33;
+    text-decoration: none;
+}
+
+.add-delete-btn-container {
+    display: inline-block;
+    float: right;
+    margin: 15px 20px;
+}
+
+.btn {
+    font-family: DinMedium;
+    font-size: 15px;
+    border-radius: 7px;
+    border: none;
+    width: 150px;
+}
+
+.delete-btn {
+    background-color: #9c001b;
+}
+
+.add-queue-btn {
+    background-color: #99cc33;
+    margin-right: 15px;
+}
+
+.add-queue-btn:hover {
+    background-color: #3c763d;
+    color: white;
+}
+
+.delete-btn:hover {
+    background-color: #a94442;
+    color: white;
 }
