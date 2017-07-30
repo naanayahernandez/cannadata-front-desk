@@ -11,10 +11,12 @@
 body {
     font-family: DinLight;
     background-color: #061726;
+    /*overflow: none;*/
 }
 
 div#header{
    position:fixed; 
+   z-index: 5;
 }
 
 div#sidebar {
@@ -94,19 +96,18 @@ div#content {
     /*display: inline-block;*/
     background-color: green;
     color: white;
-    margin: 0px 30px 20px 30px;
+    margin: 0px 20px 20px 20px;
     padding: 10px;
     text-align: center;
-
 }
 
 .countdown-container h2, p{
     margin: 0;
-    font-size: 15px;
+    font-size: 16px;
 }
 
 .countdown-container h2 {
-    font-size: 35px;
+    font-size: 38px;
 }
 
 .patient-name-container {
@@ -225,7 +226,16 @@ th {
     font-size: 15px;
     border-radius: 7px;
     border: none;
-    width: 150px;
+    width: 135px;
+}
+
+.index-btn {
+    font-family: DinMedium;
+    font-size: 12px;
+    border-radius: 8px;
+    border: none;
+    width: 90px;
+    height: 28px;
 }
 
 .delete-btn {
@@ -237,12 +247,71 @@ th {
     margin-right: 15px;
 }
 
-.add-queue-btn:hover {
+.let-in-btn:hover, .add-queue-btn:hover, .submit-btn:hover {
     background-color: #3c763d;
     color: white;
 }
 
-.delete-btn:hover {
+.remove-btn:hover, .delete-btn:hover {
     background-color: #a94442;
     color: white;
+}
+
+.remove-btn {
+    background-color: #9c001b;
+}
+
+.let-in-btn {
+    background-color: #99cc33;
+}
+
+.history-container {
+    background-color: green;
+    color: white;
+    margin: 0px 30px 20px 30px;
+    padding: 10px;
+    text-align: center;
+}
+
+.form-horizontal {
+    background-color: #11273b;
+    color: white;
+    padding: 23px;
+    border-radius: 10px;
+}
+
+.submit-btn {
+    background-color: #99cc33;
+    color: white;
+    width: 150px;
+}
+
+legend {
+    font-family: DinMedium;
+    color: #99cc33;
+    font-size: 25px;
+}
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+}
+
+#img-upload{
+    width: 100%;
 }

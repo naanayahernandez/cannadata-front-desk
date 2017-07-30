@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Cannadata Front-Desk Web App</title>
+    <script src="https://use.fontawesome.com/3b3ccf58ea.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+  </head>
+  <body>
+
+        <!--static sidebar-->
+        <div id="sidebar">
+            <div class="icon-bar">
+                <ul id="sidebar-icon-bar">
+                    <li><a href="index.html"><i class="fa fa-home fa-2x"></i><br>Home</a></li>
+                    <br>
+                    <li><a href="patients.html"><i class="fa fa-user fa-2x"></i><br>Patients</a></li> 
+                    <br>
+                    <li><a href="new-patient.html"><i class="fa fa-user-plus fa-2x"></i><br>New Patient</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!--static top bar-->
+         <div id="header">
+            <nav class="navbar navbar-default navbar-static-top navbar-style">
+                <div class="container nav-container">
+                    <div class="row">
+                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                            <div class="inner-addon search-icon">
+                                <i class="glyphicon glyphicon-search"></i>
+                                <input type="text" placeholder="Search Patients" class="form-control search-box"/>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                            <p class="navbar-text navbar-right">Store Name</p>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <!--main content-->
+        <div id="content">
+            <div class="row">
+
+            <form action="SOME PAGE GOES HERE" id="formentry" class="form-horizontal" role="form" data-parsley-validate novalidate>
+            <div class="container-fluid shadow">
+                <div class="row">
+                    <div id="valErr" class="row viewerror clearfix hidden">
+                        <div class="alert alert-danger">Oops! Seems there are some errors...</div>
+                    </div>
+                    <div id="valOk" class="row viewerror clearfix hidden">
+                        <div class="alert alert-success">Success.</div>
+                    </div>
+                <legend>New Patient Form</legend>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="control-label control-label-left col-sm-3" for="fname">First Name<span class="req">*</span></label>
+                                        <div class="controls col-sm-9">
+                                            <input id="fname" type="text" class="form-control k-textbox" data-role="text" name="fname" required="required" data-parsley-errors-container="#errId1"><span id="errId1" class="error"></span>
+                                        </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label control-label-left col-sm-3" for="lname">Last Name<span class="req"> *</span></label>
+                                        <div class="controls col-sm-9">    
+                                            <input id="lname" type="text" class="form-control k-textbox" data-role="text" name="lname" required="required" data-parsley-errors-container="#errId2"><span id="errId2" class="error"></span>
+                                        </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label control-label-left col-sm-3" for="dob">DOB<span class="req"> *</span></label>
+                                        <div class="controls col-sm-9">
+                                            <input id="dob" type="date" class="form-control k-input" data-role="date" role="textbox" aria-haspopup="true" aria-expanded="false" aria-owns="field7_dateview" aria-disabled="false" aria-readonly="false" aria-label="Current focused date is null" data-error-container="#errfield7" name="dob" required="required" style="width: 100%;" data-parsley-errors-container="#errId3"></span></span>
+                                        </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label control-label-left col-sm-3" for="field5">California ID<span class="req"> *</span></label>
+                                        <div class="controls col-sm-9">
+                                            <input id="field5" type="text" class="form-control k-textbox" data-role="text" placeholder="" required="required" data-parsley-minlength="15" data-parsley-errors-container="#errId4"><span id="errId4" class="error"></span>
+                                        </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label control-label-left col-sm-3" for="address">Address<span class="req"> *</span></label>
+                                        <div class="controls col-sm-9">
+                                            <input id="address" type="text" class="form-control k-textbox" data-role="text" name="address" required="required" data-parsley-errors-container="#errId5"><span id="errId5" class="error"></span>
+                                        </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label control-label-left col-sm-3" for="city">City<span class="req"> *</span></label>
+                                        <div class="controls col-sm-9">
+                                            <input id="city" type="text" class="form-control k-textbox" data-role="text" placeholder="" name="city" required="required" data-parsley-errors-container="#errId6"><span id="errId6" class="error"></span>
+                                        </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label control-label-left col-sm-3" for="state">State<span class="req"> *</span></label>
+                                        <div class="controls col-sm-9">    
+                                            <select id="state" class="form-control" data-role="select" name="state" selected="selected" required="required" data-parsley-errors-container="#errId7">
+                                                <option value="CA">CA</option><option value="AL">AL</option><option value="AK">AK</option><option value="AZ">AZ</option><option value="AR">AR</option><option value="CT">CT</option><option value="DE">DE</option><option value="FL">FL</option><option value="GA">GA</option><option value="ID">ID</option><option value="IL">IL</option><option value="IN">IN</option><option value="IA">IA</option><option value="KS">KS</option><option value="KY">KY</option><option value="LA">LA</option><option value="ME">ME</option><option value="MD">MD</option><option value="MA">MA</option><option value="MI">MI</option><option value="MN">MN</option><option value="MS">MS</option><option value="MO">MO</option><option value="MT">MT</option><option value="NE">NE</option><option value="NV">NV</option><option value="NH">NH</option><option value="NJ">NJ</option><option value="NM">NM</option><option value="NY">NY</option><option value="NC">NC</option><option value="ND">ND</option><option value="OH">OH</option><option value="OK">OK</option><option value="OR">OR</option><option value="PA">PA</option><option value="RI">RI</option><option value="SC">SC</option><option value="SD">SD</option><option value="TN">TN</option><option value="TX">TX</option><option value="UT">UT</option><option value="VT">VT</option><option value="VA">VA</option><option value="WA">WA</option><option value="WV">WV</option><option value=""></option><option value=""></option></select><span id="errId7" class="error"></span>
+                                        </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label control-label-left col-sm-3" for="zipcode">Zipcode<span class="req"> *</span></label>
+                                        <div class="controls col-sm-9">
+                                            <input id="zipcode" type="text" class="form-control k-textbox" data-role="text" placeholder="" data-parsley-minlength="5" name="zipcode" required="required" data-parsley-errors-container="#errId8"><span id="errId8" class="error"></span>
+                                        </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label control-label-left col-sm-3" for="zipcode">Email<span class="req"> *</span></label>
+                                        <div class="controls col-sm-9">
+                                            <input id="email" type="email" class="form-control k-textbox" data-role="text" placeholder="" data-parsley-minlength="5" name="email" required="required" data-parsley-errors-container="#errId8"><span id="errId8" class="error"></span>
+                                        </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label control-label-left col-sm-3" for="zipcode">Phone<span class="req"> *</span></label>
+                                        <div class="controls col-sm-9">
+                                            <input id="phone" type="tel" class="form-control" data-role="text" placeholder="" data-parsley-minlength="5" name="phone" required="required" data-parsley-errors-container="#errId8"><span id="errId8" class="error"></span>
+                                        </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group" style="display: block;">
+                                    <label class="control-label control-label-left col-sm-3">Deals by</label>
+                                        <div class="controls col-sm-9">
+                                            <label class="checkbox" for="checkbox174"><input type="checkbox" value="I would like to receive deals by text." id="checkbox174" name="field173" data-parsley-maxcheck="2" data-parsley-errors-container="#errId9">I would like to receive deals by text.</label><label class="checkbox" for="checkbox175"><input type="checkbox" value="I would like to receive deals by email." id="checkbox175" name="field173" data-parsley-errors-container="#errId9">I would like to receive deals by email.</label><span id="errId9" class="error"></span>
+                                        </div>
+                                </div>
+                                <div class="form-group" style="display: block;">
+                                    <label class="control-label control-label-left col-sm-3">Cannabis Preference<span class="req"> *</span></label>
+                                        <div class="controls col-sm-9">
+                                            <label class="checkbox" for="checkbox182"><input type="checkbox" value="Hybrid" id="checkbox182" name="field181" required="required" data-parsley-errors-container="#errId10">Hybrid</label><label class="checkbox" for="checkbox183"><input type="checkbox" value="Sativa" id="checkbox183" name="field181" required="required" data-parsley-errors-container="#errId10">Sativa</label><label class="checkbox" for="checkbox184"><input type="checkbox" value="Indica" id="checkbox184" name="field181" required="required" data-parsley-errors-container="#errId10">Indica</label><span id="errId10" class="error"></span>
+                                        </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label control-label-left col-sm-3">Consumption Preference<span class="req"> *</span></label>
+                                        <div class="controls col-sm-9">
+                                            <label class="checkbox" for="checkbox190"><input type="checkbox" value="flower" id="checkbox190" name="field189" required="required" data-parsley-errors-container="#errId11">Flower</label><label class="checkbox" for="checkbox191"><input type="checkbox" value="concentrate" id="checkbox191" name="field189" required="required" data-parsley-errors-container="#errId11">Concentrate</label><label class="checkbox" for="checkbox192"><input type="checkbox" value="edible" id="checkbox192" name="field189" required="required" data-parsley-errors-container="#errId11">Edible</label><label class="checkbox"><input id="checkbox197" name="field189" type="checkbox" value="other" data-parsley-errors-container="#errId11">other</label><span id="errId11" class="error"></span>
+                                        </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label control-label-left col-sm-3" for="medical-condition">Medical Condition<span class="req"> *</span></label>
+                                        <div class="controls col-sm-9">   
+                                            <textarea id="medical-condition" rows="3" class="form-control k-textbox" data-role="textarea" required="required" name="medical-condition" data-parsley-errors-container="#errId12"></textarea><span id="errId12" class="error"></span>
+                                        </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label control-label-left col-sm-3" for="hear-about-us">How did you hear about us?<span class="req"> *</span></label>
+                                        <div class="controls col-sm-9">
+                                            <textarea id="hear-about-us" rows="3" class="form-control k-textbox" data-role="textarea" name="hear-about-us" required="required" data-parsley-errors-container="#errId13"></textarea><span id="errId13" class="error"></span>
+                                        </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label control-label-left col-sm-3" for="hear-about-us">Upload ID<span class="req"> *</span></label>
+                                        <div class="controls col-sm-9">
+                                            <div class="input-group">
+                                                <span class="input-group-btn">
+                                                    <span class="btn btn-default btn-file">
+                                                        Browse… <input type="file" id="imgInp" name="id-image">
+                                                    </span>
+                                                </span>
+                                                <input type="text" class="form-control" readonly>
+                                            </div>
+                                        </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label control-label-left col-sm-3" for="hear-about-us">Upload Medical Card<span class="req"> *</span></label>
+                                        <div class="controls col-sm-9">
+                                            <div class="input-group">
+                                                <span class="input-group-btn">
+                                                    <span class="btn btn-default btn-file">
+                                                        Browse… <input type="file" id="imgInp" name="medical-card-img">
+                                                    </span>
+                                                </span>
+                                                <input type="text" class="form-control" readonly>
+                                            </div>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-default submit-btn">Submit</button>
+            </form>
+
+            </div>
+        </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script  type="text/javascript" src="side-navbar.js"></script>
+    <script  type="text/javascript" src="upload-image.js"></script>
+  </body>
+</html>
